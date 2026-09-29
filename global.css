@@ -4,21 +4,108 @@
     grid-template-areas: 
         "header"
         "main"
-        "aside"
+        "aside-left"
+        "aside-right"
         "footer";
 }
 
-.site-header { grid-area: header; }
+.site-header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .site-main { grid-area: main; } 
-.site-aside { grid-area: aside; }
+.site-aside-left { grid-area: aside-left; }
+.site-aside-right { grid-area: aside-right; }
 .site-footer { grid-area: footer; }
 
-@media (min-width: 600px) {
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .site-main */
+
+/* .product-card */
+
+/* #burgers */
+
+/* .burger-image */
+
+/* .deluxe-burger */
+
+/* .calorie-count */
+
+/* .burger-description */
+
+/* .burger-price */
+
+/* .burger-button */
+
+/* #crispy */
+
+/* .chicken-image */
+
+/* .crispy-chicken */
+
+/* .chicken-description */
+
+/* .chicken-price */
+
+/* .chicken-button */
+
+/* #sides */
+
+/* .fries-image */
+
+/* .fries */
+
+/* .fries-description */
+
+/* .fries-price */
+
+/* .fries-button */
+
+/* .curds-image */
+
+/* .curds */
+
+/* .curds-description */
+
+/* .curds-price */
+
+/* .curds-button */
+
+/* #salad */
+
+/* .salad-image */
+
+/* .salad */
+
+/* .salad-description */
+
+/* .salad-price */
+
+/* .salad-button */
+
+/* .site-aside-left */
+
+/* .site-aside-right */
+
+/* .site-footer */
+
+@media (min-width: 1024px) {
     .page {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas: 
-            "header header"
-            "main aside"
-            "footer footer";
+            "header header header header"
+            "aside-left main main aside-right"
+            "footer footer footer footer";
+    }
+
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
