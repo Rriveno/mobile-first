@@ -27,7 +27,7 @@
     justify-self: center;
     letter-spacing: 3px;
     color: #005696;
-    font-weight: 50000;
+    font-weight: 900;
 }
 
 nav {
@@ -63,8 +63,6 @@ nav {
 }
 
 .product-card {
-    display: grid;
-    grid-template-columns: 1fr;
     gap: 25px;
     border: 3px solid black;
     border-radius: 15px;
@@ -83,22 +81,22 @@ nav {
 }
 
 .product-name {
-    font-size: 2.5rem;
-    margin: 5px;
-}
-
-.calorie-count {
-    font-size: 1.75rem;
-    margin: 5px;
-}
-
-.description {
     font-size: 2rem;
     margin: 5px;
 }
 
+.calorie-count {
+    font-size: 1.25rem;
+    margin: 5px;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
 .price {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 5px;
 }
 
@@ -107,6 +105,10 @@ nav {
     border-radius: 50px;
     font-size: 2rem;
     margin: 5px
+}
+
+.button:hover {
+    background-color: rgb(220, 220, 220);
 }
 
 .prices {
@@ -149,7 +151,11 @@ nav {
 }
 
 .about {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+}
+
+.fod-image {
+    width: 100%;
 }
 
 .fod-border {
@@ -180,8 +186,37 @@ nav {
             "footer footer footer footer";
     }
 
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
     .site-header {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product-card {
+        min-width: px;
+    }
+
+    .site-aside-right {
+        min-width: 50px;
+        max-width: 200px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
