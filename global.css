@@ -9,7 +9,22 @@
         "footer";
 }
 
+:root {
+    --primary-color: #005696;
+    --radius: 1rem;
+}
 
+.overlay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+}
 
 .site-header {
     grid-area: header;
@@ -26,7 +41,7 @@
     font-size: 3rem;
     justify-self: center;
     letter-spacing: 3px;
-    color: #005696;
+    color: var(--primary-color);
     font-weight: 900;
 }
 
@@ -54,6 +69,8 @@ nav {
 }
 
 /* .site-main */
+
+
 
 .products {
     font-size: 3rem;
@@ -218,5 +235,33 @@ nav {
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .burger-image,
+    .crispy-image,
+    .fry-image,
+    .curd-image,
+    .salad-image {
+        position: relative;
+    }
+
+    .burger-image .overlay,
+    .crispy-image .overlay,
+    .fry-image .overlay,
+    .curd-image .overlay,
+    .salad-image .overlay {
+        visibility: hidden;
+        transition: background-color 0.5s ease;
+    }
+
+    .burger-image:hover .overlay,
+    .crispy-image:hover .overlay,
+    .fry-image:hover .overlay,
+    .curd-image:hover .overlay,
+    .salad-image:hover .overlay {
+        background-color: rgba(0, 86, 150, 0.5);
+        position: absolute;
+        inset: 0;
+        visibility: visible;
     }
 }
